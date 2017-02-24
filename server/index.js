@@ -4,6 +4,7 @@ const http = require('http');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const app = express();
+const router = require('./router');
 
 /* 
   App Setup
@@ -12,6 +13,7 @@ const app = express();
 // Express middleware
 app.use(morgan('combined')); // HTTP request logger middleware
 app.use(bodyParser.json({ type: '*/*' })); // Body parsing middleware
+router(app);
 
 /* 
   Server Setup

@@ -5,9 +5,17 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const app = express();
 
-// App Setup
+/* 
+  App Setup
+*/
 
-// Server Setup
+// Express middleware
+app.use(morgan('combined')); // HTTP request logger middleware
+app.use(bodyParser.json({ type: '*/*' })); // Body parsing middleware
+
+/* 
+  Server Setup
+*/
 const port = process.env.PORT || 3090;
 const server = http.createServer(app);
 server.listen(port);

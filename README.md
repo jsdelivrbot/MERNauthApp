@@ -15,9 +15,9 @@ Checkout this repo:
 
 ```
 	> cd MERNauthApp
-  > npm install
-  > cd client
-  > npm install 
+  	> npm install
+  	> cd client
+  	> npm install 
 ```
 ###Start MongoDB###
 ```
@@ -28,12 +28,12 @@ Checkout this repo:
 
 ```
 	> cd MERNauthApp
-  > npm run dev
+  	> npm run dev
 ```
 
 ###Start the client###
 
 ```
 	> cd client
-  > npm start
+  	> npm start
 ```

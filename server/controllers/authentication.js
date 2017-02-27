@@ -31,12 +31,12 @@ exports.signup = function(req, res, next) {
       password: password
     });
 
-    user.save(function(err){
+    user.save(function(err){  
       if (err) {
         return next(err);
-        // Respond to request indicating the user was created
-        res.json({ token: tokenForUser(user) });
       }
     });
+    // Respond to request indicating the user was created
+    res.json({ token: tokenForUser(user) });
   });
 }                                                               

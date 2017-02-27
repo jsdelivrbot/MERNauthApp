@@ -17,7 +17,7 @@ export function signinUser({ email, password }) {
         // - Redirect to /feature
         browserHistory.push('/feature');
       })
-      .catch(() => {
+      .catch((response) => {
         // If request is bad, show error 
         dispatch(authError('Bad Login Info'));
       }); 
@@ -35,4 +35,19 @@ export function signoutUser() {
   localStorage.removeItem('token');
 
   return { type: UNAUTH_USER };
+}
+
+export function signupUser({ email, password }) {
+  return function(dispatch) {
+    axios.post(`${ROOT_URL}/signup`, { email, password })
+      .then(response => {
+        console.log(response);
+        dispatch({ type: AUTH_USER });
+        localStorage.setItem('token', response.data.token);
+        browserHistory.push('/feature');
+      }) 
+      .catch(response => {
+        dispatch(authError(response.response.data.error));
+      });
+  }
 }

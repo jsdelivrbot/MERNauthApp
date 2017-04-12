@@ -2,16 +2,16 @@
 
 From Advanced React and Redux Udemy's course by Stephen Grider.
 
-###Getting Started
+### Getting Started
 
-####Familiar with Git?
+### Familiar with Git?
 Checkout this repo:
 
 ```
 > git clone https://github.com/anderconal/MERNauthApp.git
 ```
 
-###Install dependencies
+### Install dependencies
 
 ```
 > cd MERNauthApp
@@ -19,19 +19,19 @@ Checkout this repo:
 > cd client
 > npm install 
 ```
-###Start MongoDB
+### Start MongoDB
 ```
 > mongod
 ```
 
-###Start the server
+### Start the server
 
 ```
 > cd MERNauthApp
 > npm run dev
 ```
 
-###Start the client
+### Start the client
 
 ```
 > cd client
